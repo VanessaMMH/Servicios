@@ -1,0 +1,48 @@
+// import React from 'react';
+import React, { Component , createRef  } from 'react';  
+
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Nosotros from '../components/Nosotros';
+import '../styles/components/MainHeader.styl';
+import logo from '../styles/static/logo.png';
+
+
+      
+     
+    
+
+
+const MainHeader = (props) => (
+  <div className="Main__Header">
+    <div className="Main__Header-img">
+      <Link to="/">
+        <img src={logo} alt="Servicios Online" />
+      </Link>
+     
+     <Link to="/">
+       <div className="Main__Header-nameLogo">
+         <p>Servicios</p>
+         <p>Generales</p>
+        </div>      
+       
+     </Link>
+    </div>
+   
+   <div className="Main__Header-navbar">
+    
+      
+     <ul >
+       <li><a href="/#servicios"> Nuestros servicios</a></li>
+       <li><a href="">Nosotros</a></li>
+       <li><a href="">Trabaja con Nosotros</a></li>
+     </ul>
+   </div>
+   <Link to="/solicita">
+      <button className="Main__Header-button" type="submit">Solicita un servicio</button>
+   </Link>
+  </div>
+);
+
+
+export default (MainHeader);
