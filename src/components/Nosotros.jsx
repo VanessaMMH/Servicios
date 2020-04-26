@@ -4,7 +4,7 @@ import '../styles/components/Nosotros.styl';
 import worker from '../styles/static/worker.jpeg';
 
 const Nosotros = (props) => (
-  <div className="Nosotros">
+  <div className="Nosotros" id="nosotros">
    <div className="Nosotros-info">
        <h1>
             Somos la primera comunidad de

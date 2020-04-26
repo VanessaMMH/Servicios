@@ -33,9 +33,9 @@ const MainHeader = (props) => (
     
       
      <ul >
-       <li><a href="/#servicios"> Nuestros servicios</a></li>
-       <li><a href="">Nosotros</a></li>
-       <li><a href="">Trabaja con Nosotros</a></li>
+       <li><a href="#servicios"> Nuestros servicios</a></li>
+       <li><a href="#nosotros">Nosotros</a></li>
+       <li><a href="#work">Trabaja con Nosotros</a></li>
      </ul>
    </div>
    <Link to="/solicita">

@@ -3,7 +3,7 @@ import '../styles/components/Work.styl';
 import worker from '../styles/static/worker.png';
 
 const Nosotros = (props) => (
-  <div className="Work">
+  <div className="Work" id="work">
    <div className="Work-info">
        <h1>
             ¿Quieres ser un Helper?
