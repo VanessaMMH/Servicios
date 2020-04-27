@@ -1,12 +1,12 @@
 
-import Products from '../components/Products';
+import Services from '../components/Services';
 import Nosotros from '../components/Nosotros';
 import Work from '../components/Work';
 import React from 'react'; 
 
 const Home = () => (
     <>
-        <Products />
+        <Services />
         <Nosotros/>
         <Work/>
     </>

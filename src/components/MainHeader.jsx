@@ -1,5 +1,4 @@
 import React from 'react';
-// import React, { Component , createRef  } from 'react';  
 import { Link } from 'react-router-dom';
 import '../styles/components/MainHeader.styl';
 import logo from '../styles/static/logo.png';

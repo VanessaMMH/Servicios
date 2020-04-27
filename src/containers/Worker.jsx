@@ -7,7 +7,6 @@ import '../styles/components/Worker.styl';
 
 
 const Posit = props => {
-//   const { products } = props;
 
   const [form, setValues] = useState({
     name: '',

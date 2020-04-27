@@ -9,9 +9,10 @@ import '../styles/components/Login.styl';
 const Login = props => {
   const [form, setValues] = useState({
     name: '',
-    contacto: '',
+    contacto: 0,
     email: '',
-    direccion:''
+    direccion:'',
+    distrito:''
   });
 
   const updateInput = event => {
@@ -30,7 +31,6 @@ const Login = props => {
 
   return (
     <>
-      {/* <Header isLogin /> */}
       <section className="login">
         <section className="login__container">
           <h3>¿Qué <strong> necesitas</strong> ?</h3>
@@ -43,17 +43,19 @@ const Login = props => {
                 className="input"
                 type="text"
                 // placeholder="Nombre"
+                required
                 onChange={updateInput}
               />
               <label for="contacto">Número de contacto</label>
               <input 
                 name="contacto"
                 className="input"
-                type="text"
+                type="number"
                 // placeholder="Numero de contacto"
+                required
                 onChange={updateInput}
               />
-              <label for="email">Correo electrónico</label>
+              <label for="email">Correo electrónico (opcional)</label>
               <input 
                 name="email"
                 className="input"
@@ -67,6 +69,7 @@ const Login = props => {
                 className="input"
                 type="text"
                 // placeholder="Direccion"
+                required
                 onChange={updateInput}
               />
               <label for="distrito">Distrito</label>
@@ -125,9 +128,9 @@ const Login = props => {
           
             <div className="login__container-button">
               <Link to="/">
-                <button className="button-left" type="submit"> <i class="fas fa-angle-left"></i>{ }Regresar</button>
+                <button className="button-left" type="submit"> <i className="fas fa-angle-left"></i>{ }Regresar</button>
               </Link>
-              <button className="button-right" type="submit">Solicitar { } <i class="fas fa-angle-right"></i></button>          
+              <button className="button-right" type="submit">Solicitar { } <i className="fas fa-angle-right"></i></button>          
             </div>
 
           </form>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import '../styles/components/Products.styl';
+import '../styles/components/Services.styl';
 import fondo from '../styles/static/fondo.jpg';
-const Products = (props) => {  
-  const { products } = props;
+const Services = (props) => {  
+  const { service } = props;
   return(
-    <div className="Products">
-      <div className="Products-bg">
+    <div className="Services">
+      <div className="Services-bg">
         <img src={fondo} alt="fondo"/>
         <div className="info">
           <h1>¿Tienes algo que  <strong >reparar</strong> o <strong>mejorar </strong>?</h1>
@@ -17,24 +17,24 @@ const Products = (props) => {
           </Link>          
         </div>        
       </div>
-      <div className="Products-heading" id="servicios">
+      <div className="Services-heading" id="servicios">
         <h2>¿En qué podemos <strong>ayudarte?</strong> </h2> 
       </div>
-      <div className="Products-items" >
-        {products.map(product => (
-          <div className="Products-item" key={product.id}>
-            <img src={product.image} alt={product.title} />
-            <div className="Products-item-info">
+      <div className="Services-items" >
+        {service.map(service => (
+          <div className="Services-item" key={service.id}>
+            <img src={service.image} alt={service.title} />
+            <div className="Services-item-info">
               <h3>
-                {product.title}
+                {service.title}
               </h3>
               <h4>
-                {product.description}
+                {service.description}
               </h4>
-              <p><i className="fas fa-check"></i>{'  '}{product.item1}</p>
-              <p><i className="fas fa-check"></i>{'  '}{product.item2}</p>
-              <p><i className="fas fa-check"></i>{'  '}{product.item3}</p>
-              <p><i className="fas fa-check"></i>{'  '}{product.item4}</p>
+              <p><i className="fas fa-check"></i>{'  '}{service.item1}</p>
+              <p><i className="fas fa-check"></i>{'  '}{service.item2}</p>
+              <p><i className="fas fa-check"></i>{'  '}{service.item3}</p>
+              <p><i className="fas fa-check"></i>{'  '}{service.item4}</p>
               <Link to="/solicita">
                 <button type="button">Solicita un servicio</button>
               </Link>
@@ -47,7 +47,7 @@ const Products = (props) => {
 }
 const mapStateToProps = state => {
   return {
-    products: state.products,
+    service: state.products,
   };
 };
-export default connect(mapStateToProps, null)(Products);
+export default connect(mapStateToProps, null)(Services);

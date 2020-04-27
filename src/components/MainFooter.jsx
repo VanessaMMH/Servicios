@@ -6,7 +6,7 @@ import twitter from '../styles/static/twitter.svg';
 const MainFooter = () => (
   <div className =" MainFooter">
     <div className="MainFooter-contenedor">      
-      <div class="MainFooter-social">
+      <div className="MainFooter-social">
         <p>Siguenos en: </p>
         <a href="https://www.facebook.com/" target="_blank">
           <img src={facebook} alt = "Facebook" />
@@ -18,7 +18,7 @@ const MainFooter = () => (
           <img src={twitter} alt = "Twitter"/>
         </a>            
       </div>    
-      <p><i class="fas fa-envelope-open-text"></i> { }servicios@servicios.pe</p>
+      <p><i className="fas fa-envelope-open-text"></i> { }servicios@servicios.pe</p>
     </div>
     
     <div className="MainFooter-copyright">
