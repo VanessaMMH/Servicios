@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import '../styles/components/Header.styl';
-// import '../assets/styles/components/Header.scss';
 import logo from '../styles/static/logo.png';
 
 const Header = (props) => (

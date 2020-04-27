@@ -1,18 +1,17 @@
-import React, { Component } from 'react';  
+import React from 'react';  
 import { Route } from 'react-router-dom';  
 import Header from './Header';
 import Footer from './Footer';
 
 import '../styles/components/MainLayout.styl';
  
-const Layout = ({children, ...rest}) => {  
+const Layout = ({children}) => {  
   return (  
-    <div className="page page-dashboard">  
+    <>  
       <Header />
-      {children}
-      
+      {children}     
       <Footer />  
-    </div>  
+    </>  
   )  
 }  
   

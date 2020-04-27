@@ -1,19 +1,10 @@
-// import React from 'react';
-import React, { Component , createRef  } from 'react';  
-
+import React from 'react';
+// import React, { Component , createRef  } from 'react';  
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import Nosotros from '../components/Nosotros';
 import '../styles/components/MainHeader.styl';
 import logo from '../styles/static/logo.png';
 
-
-      
-     
-    
-
-
-const MainHeader = (props) => (
+const MainHeader = () => (
   <div className="Main__Header">
     <div className="Main__Header-img">
       <Link to="/">
@@ -29,9 +20,7 @@ const MainHeader = (props) => (
      </Link>
     </div>
    
-   <div className="Main__Header-navbar">
-    
-      
+   <div className="Main__Header-navbar">     
      <ul >
        <li><a href="#servicios"> Nuestros servicios</a></li>
        <li><a href="#nosotros">Nosotros</a></li>
