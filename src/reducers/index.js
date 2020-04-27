@@ -7,6 +7,12 @@ const reducer = (state, action) => {
         user:action.payload,
 
       }
+    case 'POSIT_REQUEST':
+      return{
+        ...state,
+        user:action.payload,
+
+      }
     default:
       return state;
   }

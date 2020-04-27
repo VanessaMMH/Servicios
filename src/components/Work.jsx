@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/components/Work.styl';
 import worker from '../styles/static/worker.png';
+import { Link } from 'react-router-dom';
 
 const Nosotros = () => (
   <div className="Work" id="work">
@@ -14,7 +15,10 @@ const Nosotros = () => (
           <h4>
                Estamos en búsqueda de profesionales con ganas de crecer y salir adelante. Súmate tú también.
           </h4>
-          <button>Postula Aqui</button>
+          <Link to="/postula">
+               <button>Postula Aqui</button>
+          </Link>
+          
      </div>
      <div className="Work-img">
           <h4>

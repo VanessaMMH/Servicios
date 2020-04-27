@@ -37,59 +37,66 @@ const Login = props => {
           <span>Completa el formulario y te asignaremos un profesional a tu tipo de problema.</span>
           <form className="login__container--form" onSubmit={handleSubmit}>
             <div className="column1">
-            <input
-              name="name"
-              className="input"
-              type="text"
-              placeholder="Nombre"
-              onChange={updateInput}
-            />
-            <input
-              name="contacto"
-              className="input"
-              type="text"
-              placeholder="Numero de contacto"
-              onChange={updateInput}
-            />
-            <input
-              name="email"
-              className="input"
-              type="text"
-              placeholder="Correo"
-              onChange={updateInput}
-            />
-            <input
-              name="direccion"
-              className="input"
-              type="text"
-              placeholder="Direccion"
-              onChange={updateInput}
-            />
-            
-            <select className= " distrito" id="distrito" name="distrito">
-              <option>--Elige un distrito--</option>  
-              <option value="1">Jose Luis Bustamante y Rivero</option>
-              <option value="2">Pacucarpata</option>
-              <option value="3">Cerro Colorado</option>
-              <option value="4">Yanahuara</option>
-              <option value="5">Mariano Melgar</option>
-              <option value="6">Yura</option>
-              <option value="7">Alto Selva Alegre</option>
-              <option value="8">Miraflores</option>
-            </select>
+              <label for="name">Nombre</label>
+              <input 
+                name="name"
+                className="input"
+                type="text"
+                // placeholder="Nombre"
+                onChange={updateInput}
+              />
+              <label for="contacto">Número de contacto</label>
+              <input 
+                name="contacto"
+                className="input"
+                type="text"
+                // placeholder="Numero de contacto"
+                onChange={updateInput}
+              />
+              <label for="email">Correo electrónico</label>
+              <input 
+                name="email"
+                className="input"
+                type="text"
+                // placeholder="Correo"
+                onChange={updateInput}
+              />
+              <label for="direccion">Dirección</label>
+              <input 
+                name="direccion"
+                className="input"
+                type="text"
+                // placeholder="Direccion"
+                onChange={updateInput}
+              />
+              <label for="distrito">Distrito</label>
+              <select className= "input" id="distrito" name="distrito">
+                <option>--Elige un distrito--</option>  
+                <option value="1">Jose Luis Bustamante y Rivero</option>
+                <option value="2">Pacucarpata</option>
+                <option value="3">Cerro Colorado</option>
+                <option value="4">Yanahuara</option>
+                <option value="5">Mariano Melgar</option>
+                <option value="6">Yura</option>
+                <option value="7">Alto Selva Alegre</option>
+                <option value="8">Miraflores</option>
+              </select>
  
             </div>
             
             <div className="column2">
-              <input type="date"
+              <label for="date">¿Cuándo necesitas el servicio?</label>
+              <input  type="date"
+               className="input"
                name="date"
-               value="2020-05-05"
+              //  value="2020-05-05"
                min="2020-01-01"
                max="2020-12-10" 
                onChange={updateInput}
               />
+              <label for="categorie">¿De qué tipo es tu problema?</label>
 
-              <select className= " categoria"  name="categorie">
+              <select className= "input"  name="categorie">
                 <option>--Elige una categoria--</option>  
                 <option value="1">Gasfiteria</option>
                 <option value="2">Pintura</option>
@@ -98,16 +105,17 @@ const Login = props => {
                 <option value="5">Carpinteria</option>
                 <option value="6">Albañileria</option>
               </select>
+              <label for="description">Descripción</label>
               <textarea className="descripcion"
                 name= "description"
                 placeholder="Describe el problema aqui...">
               </textarea>
-              <div className="login__container--remember-me">
-                <label for="file">Foto opcional:</label>
-                <input 
+              <div className="login__container--file">
+                <label for="file">Foto(opcional)</label>
+                <input  
                   type="file" 
                   name="file"
-                  className="input"
+                  // className="input"
                   onChange={updateInput}
                 />
 
@@ -115,12 +123,12 @@ const Login = props => {
           
             </div>
           
-            {/* <div className="login__container-button"> */}
-            <Link to="/">
-              <button className="button-left" type="submit"> <i class="fas fa-angle-left"></i>{ }Regresar</button>
-            </Link>
-            <button className="button-right" type="submit">Solicitar { } <i class="fas fa-angle-right"></i></button>          
-            {/* </div> */}
+            <div className="login__container-button">
+              <Link to="/">
+                <button className="button-left" type="submit"> <i class="fas fa-angle-left"></i>{ }Regresar</button>
+              </Link>
+              <button className="button-right" type="submit">Solicitar { } <i class="fas fa-angle-right"></i></button>          
+            </div>
 
           </form>
         </section>

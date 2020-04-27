@@ -12,9 +12,9 @@ const Header = (props) => (
      
       <Link to="/">
         <div className="Header-nameLogo">
-            <p>Servicios</p>
-            <p>Generales</p>
-            </div>      
+          <p>Servicios</p>
+          <p>Generales</p>
+        </div>      
       </Link>
     </div>
     <div className="Header-message">
