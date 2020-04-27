@@ -11,7 +11,7 @@ const Products = (props) => {
         <img src={fondo} alt="fondo"/>
         <div className="info">
           <h1>¿Tienes algo que  <strong >reparar</strong> o <strong>mejorar </strong>?</h1>
-          <h4>Déjalo en nuestras manos. Tenemos un Helper especialista en solucionar cualquier problema de tu hogar.</h4>
+          <h4>Déjalo en nuestras manos. Tenemos un profesional especialista en solucionar cualquier problema de tu hogar.</h4>
           <Link to="/solicita">
             <button>Solicitalo Aqui</button>
           </Link>          
