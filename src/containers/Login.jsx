@@ -12,9 +12,12 @@ const Login = props => {
     contacto: 0,
     email: '',
     direccion:'',
-    distrito:''
+    distrito:'dd',
+    date:'',
+    categorie:'',
+    description:''
   });
-
+ 
   const updateInput = event => {
     setValues({
       ...form,
@@ -73,8 +76,8 @@ const Login = props => {
                 onChange={updateInput}
               />
               <label for="distrito">Distrito</label>
-              <select className= "input" id="distrito" name="distrito">
-                <option>--Elige un distrito--</option>  
+              <select className= "input"  name="distrito" onChange={updateInput} >
+                <option selected="true" disabled="disabled">--Elige un distrito--</option>  
                 <option value="1">Jose Luis Bustamante y Rivero</option>
                 <option value="2">Pacucarpata</option>
                 <option value="3">Cerro Colorado</option>
@@ -99,8 +102,8 @@ const Login = props => {
               />
               <label for="categorie">¿De qué tipo es tu problema?</label>
 
-              <select className= "input"  name="categorie">
-                <option>--Elige una categoria--</option>  
+              <select className= "input"  name="categorie" onChange={updateInput}>
+                <option selected="true" disabled="disabled">--Elige una categoria--</option>  
                 <option value="1">Gasfiteria</option>
                 <option value="2">Pintura</option>
                 <option value="3">Electricidad</option>
@@ -111,7 +114,7 @@ const Login = props => {
               <label for="description">Descripción</label>
               <textarea className="descripcion"
                 name= "description"
-                placeholder="Describe el problema aqui...">
+                placeholder="Describe el problema aqui..." onChange={updateInput}>
               </textarea>
               <div className="login__container--file">
                 <label for="file">Foto(opcional)</label>

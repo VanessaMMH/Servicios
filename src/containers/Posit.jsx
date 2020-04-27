@@ -3,16 +3,19 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { positRequest } from "../actions";
-import '../styles/components/Worker.styl';
+import '../styles/components/Posit.styl';
 
 
 const Posit = props => {
 
   const [form, setValues] = useState({
-    name: '',
-    contacto: '',
-    email: '',
-    direccion:''
+    name:'',
+    documento:'',
+    numDocumento:0,
+    contacto:0,
+    email:'',
+    date:'',
+    service:''
   });
 
   const updateInput = event => {
@@ -46,8 +49,8 @@ const Posit = props => {
                 onChange={updateInput}
               />
               <label for="documento">Tipo de documento de identidad</label>
-              <select className= "input" id="documento" name="documento">
-                {/* <option>--Elige un distrito--</option>   */}
+              <select className= "input" id="documento" name="documento" onChange={updateInput}>
+                <option  selected="true" disabled="disabled">--Elige documento--</option>
                 <option value="1">DNI</option>
                 <option value="2">CE</option>
                 <option value="3">PASAPORTE</option>
@@ -56,7 +59,7 @@ const Posit = props => {
               <input 
                 name="numDocumento"
                 className="input"
-                type="text"
+                type="number"
                 // placeholder="Numero de contacto"
                 onChange={updateInput}
               />
@@ -64,7 +67,7 @@ const Posit = props => {
               <input 
                 name="contacto"
                 className="input"
-                type="text"
+                type="number"
                 // placeholder="Correo"
                 onChange={updateInput}
               />
@@ -72,7 +75,7 @@ const Posit = props => {
               <input 
                 name="email"
                 className="input"
-                type="text"
+                type="correo"
                 // placeholder="Correo"
                 onChange={updateInput}
               />
@@ -89,35 +92,35 @@ const Posit = props => {
                 max="2020-12-10" 
                 onChange={updateInput}
                 />
-                <h6>Selecciona hasta 3 categorías</h6>
-                <div className="tools">
-                    <label for="first_checkbox">
-                        <input type="checkbox" id="cbox" value="first_checkbox" />
+                <h6>Selecciona la categoria</h6>
+                <div className="tools" >
+                    <label for="gasfiteria">
+                        <input type="checkbox" id="cbox" name="service" value="gasfiteria" onChange={updateInput} />
                         <img src="https://storage.cloud.google.com/images-service/llaveInglesa.png"  alt="tool" />
                         Gasfiteria
                     </label>
-                    <label for="first_checkbox">
-                        <input type="checkbox" id="cbox" value="first_checkbox" />
+                    <label for="pintura">
+                        <input type="checkbox" id="cbox" name="service" value="pintura"onChange={updateInput} />
                         <img src="https://storage.cloud.google.com/images-service/rodillo-de-pintura.png"  alt="tool" />
                         Pintura
                     </label>
-                    <label for="first_checkbox">
-                        <input type="checkbox" id="cbox" value="first_checkbox" />
+                    <label for="electricidad">
+                        <input type="checkbox" id="cbox" name="service" value="electricidad" />
                         <img src="https://storage.cloud.google.com/images-service/enchufe.png"  alt="tool" />
                         Electricidad
                     </label>
-                    <label for="first_checkbox">
-                        <input type="checkbox" id="cbox" value="first_checkbox" />
+                    <label for="instalaciones">
+                        <input type="checkbox" id="cbox" name="service" value="instalaciones" />
                         <img src="https://storage.cloud.google.com/images-service/perforar.png"  alt="tool" />
                         Instalaciones
                     </label>
-                    <label for="first_checkbox">
-                        <input type="checkbox" id="cbox" value="first_checkbox" />
+                    <label for="carpinteria">
+                        <input type="checkbox" id="cbox" name="service" value="carpinteria" />
                         <img src="https://storage.cloud.google.com/images-service/sierra.png"  alt="tool" />
                         Carpinteria
                     </label>
-                    <label for="first_checkbox">
-                        <input type="checkbox" id="cbox" value="first_checkbox" />
+                    <label for="albanileria">
+                        <input type="checkbox" id="cbox" name="service" value="albanileria" />
                         <img src="https://storage.cloud.google.com/images-service/ladrillo.png"  alt="tool" />
                         Albañileria
                     </label>
@@ -132,9 +135,9 @@ const Posit = props => {
           
             <div className="posit__container-button">
               <Link to="/">
-                <button className="button-left" type="submit"> <i class="fas fa-angle-left"></i>{ }Regresar</button>
+                <button className="button-left" type="submit"> <i className="fas fa-angle-left"></i>{ }Regresar</button>
               </Link>
-              <button className="button-right" type="submit">Enviar { } <i class="fas fa-angle-right"></i></button>          
+              <button className="button-right" type="submit">Enviar { } <i className="fas fa-angle-right"></i></button>          
             </div>
 
           </form>

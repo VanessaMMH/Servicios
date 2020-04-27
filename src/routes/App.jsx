@@ -4,7 +4,7 @@ import Home from '../containers/Home';
 import MainLayout from '../components/MainLayout';
 import Layout from '../components/Layout';
 import Login from '../containers/Login';
-import Worker from "../containers/Worker";
+import Posit from "../containers/Posit";
 class App extends Component {  
   render() {  
     return (  
@@ -15,7 +15,7 @@ class App extends Component {
           </Route>  
           <MainLayout path="/home" component={Home} />  
           <Layout path="/solicita" component={Login} /> 
-          <Layout path="/postula" component={Worker} />
+          <Layout path="/postula" component={Posit} />
         </Switch>  
       </Router>  
     );  
