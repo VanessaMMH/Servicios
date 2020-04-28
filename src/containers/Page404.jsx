@@ -8,7 +8,7 @@ const Page404 = () => {
     return(
     <>
         <Header isPage404 />
-        <div className="container">
+        <div className="Page404">
             
             <img src={fondo} alt="fondo"/>
             
