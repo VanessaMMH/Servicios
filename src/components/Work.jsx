@@ -17,12 +17,11 @@ const Nosotros = () => (
           </h4>
           <Link to="/postula">
                <button>Postula Aqui</button>
-          </Link>
-          
+          </Link>         
      </div>
      <div className="Work-img">
           <h4>
-          "... Desde el comienzo supe que ser parte de la comunidad  era una buena idea. Hasta el día de hoy no me arrepiento. Es una herramienta excelente para ofertar mis servicios."
+               "... Desde el comienzo supe que ser parte de la comunidad  era una buena idea. Hasta el día de hoy no me arrepiento. Es una herramienta excelente para ofertar mis servicios."
           </h4>
           <img src={worker} alt=" Trabajador" />
           <p>Carlos Manchego</p>

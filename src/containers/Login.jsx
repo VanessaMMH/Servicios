@@ -124,7 +124,6 @@ const Login = props => {
                 <input  
                   type="file" 
                   name="file"
-                  // className="input"
                   onChange={updateInput}
                 />
 

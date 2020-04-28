@@ -9,9 +9,7 @@ const Page404 = () => {
     <>
         <Header isPage404 />
         <div className="Page404">
-            
-            <img src={fondo} alt="fondo"/>
-            
+            <img src={fondo} alt="fondo"/>           
         </div>
         <Footer isPage404Footer/>
     </>

@@ -19,8 +19,7 @@ const MainFooter = () => (
         </a>            
       </div>    
       <p><i className="fas fa-envelope-open-text"></i> { }servicios@servicios.pe</p>
-    </div>
-    
+    </div>    
     <div className="MainFooter-copyright">
       <h5>Servicios © 2020 Todos los derechos reservados</h5>
     </div>   

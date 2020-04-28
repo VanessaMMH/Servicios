@@ -131,11 +131,8 @@ const Posit = props => {
                 <h6>Requisitos indispensables</h6>
                 <p>Contar con celular con acceso a internet.</p>
                 <p>Contar con mínimo 3 años de experiencia.</p>
-                <p>Contar con disponibilidad laboral como trabajador independiente.</p>
-               
-            
-            </div>
-          
+                <p>Contar con disponibilidad laboral como trabajador independiente.</p>           
+            </div>          
             <div className="posit__container-button">
               <Link to="/">
                 <button className="button-left" type="submit"> <i className="fas fa-angle-left"></i>{ }Regresar</button>
