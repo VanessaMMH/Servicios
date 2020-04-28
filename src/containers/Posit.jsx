@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { positRequest } from "../actions";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/components/Posit.styl';
 
 
@@ -34,6 +36,7 @@ const Posit = props => {
 
   return (
     <>
+      <Header />
       <section className="posit">
         <section className="posit__container">
           <h3>¿Eres un profesional en  <strong> servicios</strong> ?</h3>
@@ -143,6 +146,7 @@ const Posit = props => {
           </form>
         </section>
       </section>
+      <Footer/>
     </>
   );
 }

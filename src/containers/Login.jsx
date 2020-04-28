@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginRequest } from "../actions";
 import '../styles/components/Login.styl';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 const Login = props => {
@@ -34,6 +36,7 @@ const Login = props => {
 
   return (
     <>
+      <Header />
       <section className="login">
         <section className="login__container">
           <h3>¿Qué <strong> necesitas</strong> ?</h3>
@@ -139,6 +142,7 @@ const Login = props => {
           </form>
         </section>
       </section>
+      <Footer/>
     </>
   );
 }
